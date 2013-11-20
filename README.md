@@ -12,6 +12,7 @@ run a daily script and populate/update your own three column database.
     json
     curb
     yaml
+    open-uri
 
 ### Parameters.yml
 
@@ -19,4 +20,4 @@ A parameters.yml file is needed to define your accounts and what metrics you wan
 not committed to the repository to prevent system specific or sensitive information from being
 included. However, a parameters.yml.dist file is included for you to use as a base for your parameters.yml file.
 
-    cp app/config/parameters.yml.dist app/config/parameters.yml
+    cp parameters.yml.dist parameters.yml
