@@ -1,6 +1,6 @@
 app_annie:
     api_uri:            https://api.appannie.com/v1
-    username:           daemail@example.com
+    username:           duhemail@example.com
     password:           secret
 
     accounts:
@@ -9,25 +9,109 @@ app_annie:
         apps:
           - app_id:         com.myapp.client
             app_name:       MyApp Free
-            downloads:      GP_APP_FREE_DLS
+            sales:
+                downloads:      GP_APP_FREE_DLS
+            ratings:
+                all_average:    GP_APP_FREE_RATING_AVG
+                all_count:      GP_APP_FREE_RATING_CNT
+            rankings:
+              - name:           GP_APP_FREE_RANK_US_APPS
+                country:        US
+                category:       OVERALL > APPLICATION
+                feed:           free
+              - name:           GP_APP_FREE_RANK_US_TOOLS
+                country:        US
+                category:       OVERALL > APPLICATION > TOOLS
+                feed:           free
 
           - app_id:         com.myapp.client.paid
             app_name:       MyApp Paid
-            downloads:      GP_APP_PAID_DLS
-            revenue:        GP_APP_PAID_DLS_REV
+            sales:
+                downloads:      GP_APP_PAID_DLS
+                revenue:        GP_APP_PAID_DLS_REV
+            ratings:
+                all_average:    GP_APP_PAID_RATING_AVG
+                all_count:      GP_APP_PAID_RATING_CNT
+            rankings:
+              - name:           GP_APP_PAID_RANK_US_APPS
+                country:        US
+                category:       OVERALL > APPLICATION
+                feed:           paid
+              - name:           GP_APP_PAID_RANK_US_TOOLS
+                country:        US
+                category:       OVERALL > APPLICATION > TOOLS
+                feed:           paid
 
       - account_id:     22222
         account_name:   iTunes
         apps:
           - app_id:         123456789
             app_name:       MyApp - It does stuff
-            downloads:      ITC_MYAPP_DLS
-            revenue:        ITC_MYAPP_DLS_REV
+            sales:
+                downloads:      ITC_MYAPP_DLS
+                revenue:        ITC_MYAPP_DLS_REV
+            ratings:
+                all_average:    ITC_MYAPP_RATING_ALL_AVG
+                all_count:      ITC_MYAPP_RATING_ALL_CNT
+                cur_average:    ITC_MYAPP_RATING_CUR_AVG
+                cur_count:      ITC_MYAPP_RATING_CUR_CNT
+            rankings:
+              - name:           ITC_MYAPP_RANK_US_OVERALL_IPHONE
+                country:        US
+                category:       Overall
+                device:         iphone
+                feed:           paid
+              - name:           ITC_MYAPP_IOS_RANK_US_UTILITY_IPHONE
+                country:        US
+                category:       Overall > Utilities
+                device:         iphone
+                feed:           paid
+              - name:           ITC_MYAPP_IOS_RANK_US_OVERALL_IPAD
+                country:        US
+                category:       Overall
+                device:         ipad
+                feed:           paid
+              - name:           ITC_MYAPP_IOS_RANK_US_UTILITY_IPAD
+                country:        US
+                category:       Overall > Utilities
+                device:         ipad
+                feed:           paid
 
       - account_id:     33333
         account_name:   Amazon
         apps:
           - app_id:         ABCDEF0000
             app_name:       MyApp - It does stuff
-            downloads:      AMZ_MYAPP_DLS
-            revenue:        AMZ_MYAPP_REV
+            sales:
+                downloads:      AMZ_MYAPP_DLS
+                revenue:        AMZ_MYAPP_REV
+            ratings:
+                all_average:    AMZ_MYAPP_RATING_ALL_AVG
+                all_count:      AMZ_MYAPP_RATING_ALL_CNT
+            rankings:
+              - name:           AMZ_MYAPP_RANK_US_UTILITY
+                country:        US
+                category:       Utilities
+                feed:           paid
+
+
+google_analytics:
+    username:           duhemail@example.com
+    password:           secrets
+
+    profiles:
+      - profile_id:     1111111
+        profile_name:   www.example.com
+        metrics:
+          - name:           WEB_EXAMPLE_UNIQUES
+            type:           visitors
+          - name:           WEB_EXAMPLE_PAGE_VIEWS
+            type:           pageViews
+
+      - profile_id:     2222222
+        profile_name:   www.fake.com
+        metrics:
+          - name:           WEB_FAKE_UNIQUES
+            type:           visitors
+          - name:           WEB_FAKE_PAGE_VIEWS
+            type:           pageViews
