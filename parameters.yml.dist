@@ -100,18 +100,41 @@ google_analytics:
     password:           secrets
 
     profiles:
-      - profile_id:     1111111
-        profile_name:   www.example.com
+      - profile_id:         1111111
+        profile_name:       www.example.com
         metrics:
-          - name:           WEB_EXAMPLE_UNIQUES
-            type:           visitors
-          - name:           WEB_EXAMPLE_PAGE_VIEWS
-            type:           pageViews
+          - name:               WEB_EXAMPLE_UNIQUES
+            type:               visitors
+          - name:               WEB_EXAMPLE_PAGE_VIEWS
+            type:               pageViews
 
       - profile_id:     2222222
         profile_name:   www.fake.com
         metrics:
-          - name:           WEB_FAKE_UNIQUES
-            type:           visitors
-          - name:           WEB_FAKE_PAGE_VIEWS
-            type:           pageViews
+          - name:               WEB_FAKE_UNIQUES
+            type:               visitors
+          - name:               WEB_FAKE_PAGE_VIEWS
+            type:               pageViews
+
+flurry:
+    api_uri:            http://api.flurry.com
+    api_access_code:    ABCDEFGHIJKLMNOPQRST
+
+    apps:
+      - api_key:            1ABCDEFGHIJKLMNOPQRS
+        app_name:           iOS My App
+        metrics:
+          - name:               ITC_MYAPP_IOS_SESSIONS
+            type:               Sessions
+
+      - api_key:            2ABCDEFGHIJKLMNOPQRS
+        app_name:           Android My App
+        metrics:
+          - name:               GP_MYAPP_SESSIONS
+            type:               Sessions
+
+      - api_key:            3ABCDEFGHIJKLMNOPQRS
+        app_name:           Windows My App
+        metrics:
+          - name:               WINDPHONE_MYAPP_SESSIONS
+            type:               Sessions
