@@ -1,8 +1,8 @@
 simpalytics
 ===========
 
-Get metric data from App Annie, Google Analytics and Flurry APIs in any array of hashes in the form
-{"metric_name"=>"METRIC_NAME", "date"=>"YYYY-MM-DD", "value"=>numeric_value}
+Get metric data from App Annie, Google Analytics, and Flurry APIs in an array of hashes in the form
+{"metric_name"=>"METRIC_NAME", "date"=>"YYYY-MM-DD", "value"=>numeric_value}.
 Use the ruby scripts to get your web and app analytic data in a simple to use format. Use the classes to
 run a daily cron job and populate/update your own three column database.
 
